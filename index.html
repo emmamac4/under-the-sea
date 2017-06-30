@@ -1,0 +1,535 @@
+<html>
+    <head>
+        
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.5/dist/aframe-extras-min.js"></script>
+    <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+  
+  </head>
+  
+  <body>
+      
+    <a-scene>
+      
+      <a-asset>
+          <a-asset-item id="cloud-mtl" src="island-cloud-mod.mtl"> </a-asset-item>
+          <a-asset-item id="cloud-obj" src="island-cloud-mod.obj"> </a-asset-item>
+          <a-asset-item id="fish-obj" src="fish.obj"></a-asset-item>
+          <a-asset-item id="fish-mtl" src="fish.mtl"></a-asset-item>
+          <a-asset-item id="sea-horse-obj" src="the-sea-horse.obj"></a-asset-item>
+          <a-asset-item id="sea-horse-mtl" src="the-sea-horse.mtl"></a-asset-item>
+          <a-asset-item id="sponge-obj" src="sponge.obj"></a-asset-item>
+          <a-asset-item id="sponge-mtl" src="sponge.mtl"></a-asset-item>
+          <a-asset-item id="soda-obj" src="soda-can.obj"></a-asset-item>
+          <a-asset-item id="soda-mtl" src="soda-can.mtl"></a-asset-item>
+          <a-asset-item id="coral-mtl" src="coral-purple.mtl"></a-asset-item>
+          <a-asset-item id="coral-purple-obj" src="coral-purple.obj"></a-asset-item>
+          <a-asset-item id="trash-mtl" src="trash-can.mtl"></a-asset-item>
+          <a-asset-item id="trash-obj" src="trash-can.obj"></a-asset-item>
+          <a-asset-item id="bottle-mtl" src="beer-bottle.mtl"></a-asset-item>
+          <a-asset-item id="bottle-obj" src="beer-bottle.obj"></a-asset-item>
+          <!--<a-asset-item id="cloud-material" src="13-cloud-png-image.png" ></a-asset-item>-->
+          <!--<a-asset-item id="shampoo-mtl" src="bottle-test.mtl"></a-asset-item>-->
+          <!--<a-asset-item id="shampoo-obj" src="bottle-test.obj"></a-asset-item>-->
+
+          <!--<img id="purple-scales" src="scales.jpg" />-->
+          
+      </a-asset>
+        
+      <!--clouds    -->
+      
+      <a-entity material="src:#cloud-material" obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="0 5 -7" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="3 6 -6" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="-3 5 -4" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="8 7 -8" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="-6 4 -5" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="-10 8 -4" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="12 4 -6" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #cloud-obj; mtl: #cloud-mtl" position="20 8 -8" scale=".01 .01 .01"></a-entity>
+      
+      <!--sponge bob-->
+      
+      <a-entity id = "spongebob" obj-model="obj: #sponge-obj; mtl: #sponge-mtl" position="-3 1.7 -5" scale=".2 .2 .2"></a-entity>
+      
+      <!--text scene 1-->
+      
+      <a-text position = "-2 3 -5" value = "Hey there! I am Spongebob, and I'm here to take you on a tour of the place that I, as well as all of the creatures in the sea, call our home! A lot has happened in recent years, and I wanted to give you a tour of it all. Off we go!"> </a-text>
+      
+      <!--fish-->
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="10 -5 -5" 
+        scale=".01 .01 .01"
+        rotation="0 270 0"
+        
+      >
+        <a-animation
+            attribute="position"
+            dur="5000"
+            repeat="indefinite"
+            direction="alternate"
+            from="10 -5 -5"
+            to="-10 -5 -5"
+        >
+        </a-animation>  
+      </a-entity>
+    
+      
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="9 -7 -4" 
+        scale=".01 .01 .01" 
+        rotation="0 270 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="5000"
+            repeat="indefinite"
+            direction="alternate"
+            from="9 -7 -4"
+            to="-9 -7 -4"
+          > 
+        
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="8 -4 -6" 
+        scale=".01 .01 .01" 
+        rotation="0 270 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="4000"
+            repeat="indefinite"
+            direction="alternate"
+            from="8 -4 -6"
+            to="-8 -4 -6"
+          >
+          
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="-9 -5 -4" 
+        scale=".01 .01 .01" 
+        rotation="0 90 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="4000"
+            repeat="indefinite"
+            direction="alternate"
+            from="-9 -5 -4"
+            to="9 -5 -4"
+          >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="-10 -6 -5" 
+        scale=".01 .01 .01" 
+        rotation="0 90 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="6000"
+            repeat="indefinite"
+            direction="alternate"
+            from="-10 -6 -5"
+            to="10 -6 -5"
+        >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="9 -4 -6" 
+        scale=".01 .01 .01"
+        rotation="0 270 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="6000"
+            repeat="indefinite"
+            direction="alternate"
+            from="9 -4 -6"
+            to="-9 -4 -6"
+          >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="10 -8 -4" 
+        scale=".01 .01 .01" 
+        rotation="0 270 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="5000"
+            repeat="indefinite"
+            direction="alternate"
+            from="10 -8 -4"
+            to="-10 -7 -4"
+          >
+      </a-entity>
+      
+      <a-entity   
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="8 -5 -6" 
+        scale=".01 .01 .01" 
+        rotation="0 270 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="4000"
+            repeat="indefinite"
+            direction="alternate"
+            from="8 -5 -6"
+            to="-8 -5 -6"
+          >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="-9 -7 -4" 
+        scale=".01 .01 .01" 
+        rotation="0 90 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="5000"
+            repeat="indefinite"
+            direction="alternate"
+            from="-9 -7 -4"
+            to="9 -7 -4"
+          >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="-8 -8 -5" 
+        scale=".01 .01 .01" 
+        rotation="0 90 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="4000"
+            repeat="indefinite"
+            direction="alternate"
+            from="-8 -8 -5"
+            to="8 -8 -5"
+        >
+      </a-entity>
+       
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="-16 -3 -5" 
+        scale=".01 .01 .01"
+        rotation="0 90 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="6000"
+            repeat="indefinite"
+            direction="alternate"
+            from="-16 -3 -5"
+            to="16 -3 -5"
+         >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="8 -6 -2" 
+        scale=".01 .01 .01" 
+        rotation="0 270 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="5000"
+            repeat="indefinite"
+            direction="alternate"
+            from="8 -6 -2"
+            to="-8 -6 -2"
+          >
+          
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="14 -8 -4" 
+        scale=".01 .01 .01" 
+        rotation="0 270 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="4000"
+            repeat="indefinite"
+            direction="alternate"
+            from="8 -8 -4"
+            to="-14 -8 -4"
+         >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="-10 -2 -3" 
+        scale=".01 .01 .01" 
+        rotation="0 90 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="5000"
+            repeat="indefinite"
+            direction="alternate"
+            from="-10 -2 -3"
+            to="10 -2 -3"
+        >
+      </a-entity>
+      
+      <a-entity 
+        obj-model="obj: #fish-obj; mtl: #fish-mtl" 
+        position="-8 -1 0" 
+        scale=".01 .01 .01" 
+        rotation="0 90 0"
+      >
+          <a-animation
+            attribute="position"
+            dur="6000"
+            repeat="indefinite"
+            direction="alternate"
+            from="-8 -1 0"
+            to="8 -1 0"
+        >
+      </a-entity>
+      
+      <a-entity id = "spongebob2" obj-model="obj: #sponge-obj; mtl: #sponge-mtl" position="-.5 -10 -5" scale=".2 .2 .2"></a-entity>
+      
+      <!--sea horse-->
+      
+      <a-entity id = "seaHorse" obj-model="obj: #sea-horse-obj; mtl: #sea-horse-mtl" position="-1.9 -5 -5" scale=".3 .3 .3"></a-entity>
+      
+      <!--second text bubble-->
+      <a-text id = "text2" position = "-2.7 -6 -5" value = "As you can see, there are a lot of fish, crustaceans, and plants that co-exist in this beautiful environment. We all get along pretty well! We sing together, travel together, and live together, although there are certain fish to watch out for!"> </a-text>
+      
+      <!--ocean-->
+      
+      <a-gradient-sky material="shader: gradient; topColor: 98 217 237; bottomColor: 88 117 155;"></a-gradient-sky>
+  
+      <a-ocean width="70" depth="70" density="40"></a-ocean>
+
+      <a-entity id="light" light="type: ambient; color: #888"></a-entity>
+      
+      <a-light type="point" color="white" position="0 0 0"></a-light>
+      
+      <!--soda can & trash-->
+    <!--<a-entity id="soda" obj-model="obj: #soda-obj; mtl: #soda-mtl" rotation = "0 90 0" position="-2 -13.5 -5" scale=".5 .5 .5">-->
+      <!-- <a-animation attribute="position" to="-2.5 -13.4 -5" direction="alternate" dur="2000"-->
+      <!--repeat="indefinite"></a-animation>-->
+
+    <!--</a-entity>-->
+       <a-entity id="soda" obj-model="obj: #soda-obj; mtl: #soda-mtl" rotation = "0 90 0" position="-2 -13.5 -5" scale=".5 .5 .5">
+           <a-animation attribute = "position" direction="alternate" from = "-2 -13 -5" to="-2 -14.5 -5" duration = "2000" repeat = "indefinite"></a-animation>
+       </a-entity>
+       <a-entity id="soda" obj-model="obj: #soda-obj; mtl: #soda-mtl" rotation = "0 90 0" position="4 -15.5 -5" scale=".5 .5 .5">
+           <a-animation attribute = "position" direction="alternate" from = "4 -15.5 -5" to="4 -17 -5" duration = "2000" repeat = "indefinite"></a-animation>
+       </a-entity>
+       <a-entity id="soda" obj-model="obj: #soda-obj; mtl: #soda-mtl" rotation = "0 90 0" position="0 -19.5 -5" scale=".5 .5 .5">
+           <a-animation attribute = "position" direction="alternate" from = "0 -19.5 -5" to="0 -21 -5" duration = "2000" repeat = "indefinite"></a-animation>
+       </a-entity>
+       
+       <a-entity id="soda" obj-model="obj: #soda-obj; mtl: #soda-mtl" rotation = "0 90 0" position="-6 -17.5 -5" scale=".5 .5 .5">
+           <a-animation attribute = "position" direction="alternate" from = "-6 -17.5 -5" to="-6 -19 -5" duration = "2000" repeat = "indefinite"></a-animation>
+       </a-entity>-->
+       <a-entity id="soda" obj-model="obj: #soda-obj; mtl: #soda-mtl" rotation = "0 90 0" position="-2 -19.5 -5" scale=".5 .5 .5">
+           <a-animation attribute = "position" direction="alternate" from = "-2 -19.5 -5" to="-2 -21.5 -5" duration = "2000" repeat = "indefinite"></a-animation>
+           </a-entity>
+       <a-entity id = "spongebob3" obj-model="obj: #sponge-obj; mtl: #sponge-mtl" position="2 -15.7 -5" scale=".2 .2 .2"></a-entity>
+       
+       <!--moving soda cans-->
+       
+       <!--<a-entity>-->
+                <!--<a-entity position="0 0 0">-->
+                    
+                <!--        <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 6.1 0" repeat="indefinite"> </a-animation>-->
+                <!--    </a-entity>-->
+                <!--</a-entity>-->
+            <!--<a-animation attribute="rotation"-->
+            <!--   dur="2410.1"-->
+            <!--   fill="forwards"-->
+            <!--   to="0 360 0"-->
+            <!--   repeat="indefinite"></a-animation>-->
+            <!--</a-entity>-->
+       
+       <!--water bottle-->
+       
+       <a-entity obj-model="obj: #bottle-obj; mtl: #bottle-mtl" position="3 -18.5 -3" scale=".1 .1 .1">
+           <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="180 360 180"
+               repeat="indefinite"></a-animation>
+       </a-entity>
+       <a-entity obj-model="obj: #bottle-obj; mtl: #bottle-mtl" position="-5 -14.5 -4" scale=".1 .1 .1">
+                  <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="180 360 180"
+               repeat="indefinite"></a-animation>
+       </a-entity>
+       <a-entity obj-model="obj: #bottle-obj; mtl: #bottle-mtl" position="-5 -16.5 -5" scale=".1 .1 .1">
+                  <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="180 360 180"
+               repeat="indefinite"></a-animation>
+       </a-entity>
+       
+       <!--shampoo-->
+       
+       <!-- <a-entity fill="forwards" obj-model="obj: #shampoo-obj; mtl: #bottle-mtl" position="-3 -15.5 -4" scale=".1 .1 .1"></a-entity>-->
+       <!--<a-entity fill="fowards" obj-model="obj: #shampoo-obj; mtl: #bottle-mtl" position="4 -17.5 -4" scale=".1 .1 .1"></a-entity>-->
+       
+       <!-- text 3 -->
+       
+       <a-text id = "text3" position = "-3 -17 -5" value = "Sometimes though, it is hard to speak up about how we feel because not everyone pays attention to us critters far, far in the ocean! Most land folks often forget that there is an entire community living here, especially when they throw their waste away to wherever they please. Our home is your home, too, even if you don’t see ours every day. Being considerate of your everyday activities is the first step in being environmentally conscious! Did you know it takes at least 450 years for a single plastic water bottle to completely degrade? Switching to BPA-free, reusable bottles is just one way in helping our planet grow and prosper!"> </a-text>
+       
+       <!--coral reef-->
+        <a-entity id = "coral" obj-model="obj: #coral-purple-obj; mtl: #coral-purple-mtl" position="-5 -28 -5" scale="1 1 1" ></a-entity>
+        <a-entity id = "spongebob4" obj-model="obj: #sponge-obj; mtl: #sponge-mtl" position="3 -28 -5" scale=".2 .2 .2"></a-entity>
+        <!-- text 4 -->
+       <a-text id = "text4" position = "-3 -28 -5" value = "Here’s our Great Barrier Reef, though it was once beautiful and vibrant in color, unfortunately it is not anymore. Most of the Great Coral Reef has been affected by the mass bleaching events, which has killed over 22% of coral. “Coral bleaching is a stress response that happens when an increase in sea temperatures causes the expulsion of algae that grow inside coral, turning the reefs white and eliminating their main energy source.” Coral bleaching is directly linked to global warming, which has ultimately led to the death of these once beautiful, colorful, organisms. Did you know that there are 1,625 species of fish in the Great Barrier Reef, which holds 10% of the world’s fish species? There are also more than 600 types of hard and soft corals, 215 species of birds, 133 varieties of sharks and rays, 30 species of whales and dolphins, 14 species of sea snakes, and 6 of 7 of the world’s species of marine turtle! Talk about DIVERSITY!"> </a-text>
+       
+       <!-- recycle bin -->
+        <a-entity position="-3.080 -35.678 -5.000" id = "trash-can" obj-model="obj: #trash-obj; mtl: #trash-mtl" position="-4 -35 -5" scale="1 1 1">
+      <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
+  </a-entity>
+       
+        <a-entity id = "spongebob5" obj-model="obj: #sponge-obj; mtl: #sponge-mtl" position="4 -36 -5" scale=".2 .2 .2"></a-entity>
+        
+        <!--text 5-->
+        <a-text id= "text5" position = "-3 -35 -5" value = "Our home is your home, too! There are so many ways we can all take part in creating proactive solutions rather than reactive solutions. The easiest way to be a part of the movement to clean up our planet is to reduce pollution and avoid using plastic when possible. A major cause of the Great Barrier Reef’s deterioration is due to land-based run-off, an action purely caused by humans. We should be more mindful of how we dispose of our waste! You could try carpooling or using modes of transportation that don’t require use of fossil fuels to be more environmentally friendly!"></a-text>
+
+      <!--fish pt 2-->
+      
+       <a-entity id="fish" obj-model="obj: #fish-obj; mtl: #fish-mtl" position="0 -40 -5" scale=".01 .01 .01">
+            <a-animation
+            attribute="position"
+            dur="5000"
+            repeat="indefinite"
+            direction="alternate"
+            from="0 -40 -5"
+            to="0 -40 -5"></a-animation>
+       </a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="3 -45 -4" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="5 -46 -6" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-3 -42 -4" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-5 -48 -5" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="0 -41 -6" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="3 -48 -4" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="5 -45 -6" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-3 -47 -4" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-5 -48 -5" scale=".01 .01 .01" ></a-entity>
+       
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-2 -43 -5" scale=".01 .01 .01"></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="4 -46 -2" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="3 -48 -4" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-8 -42 -3" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl" position="-4 -41 0" scale=".01 .01 .01" ></a-entity>
+      
+      <a-entity id = "spongebob6" obj-model="obj: #sponge-obj; mtl: #sponge-mtl" position="-3 -45 -5" scale=".2 .2 .2"></a-entity>
+      
+      <!--text 6-->
+      
+      <a-text id="text6" position="-2 -44 -5" value=" I know this information can be overwhelming to hear, but it’s the truth, whether we like it or not. The great news is that we hold the power to ignite change by being more considerate of our Earth and the products/services we use. We are the future and we could save the world from global warming if we all work together!"></a-text>
+      
+      <!--camera-->
+      
+      <a-camera id = "cam" look-controls wasd-controls  = "wsAxis: y; wsInverted: true" >
+        <!--userHeight = "1.6"-->
+       <a-cursor></a-cursor>
+      </a-camera>
+      <script>
+         var boxEl = document.getElementById('spongebob');
+         var cameraEl = document.getElementById('cam');
+        // var skyEl = document.getElementById('image-360');
+        
+            boxEl.addEventListener('click', function () {
+            cameraEl.setAttribute('user-height', "-7")
+            // skyEl.setAttribute('src',"#earth")
+            boxEl.setAttribute('visible',"false")
+            });
+            
+       var clickelement2 = document.getElementById("seaHorse")
+        
+       clickelement2.addEventListener('click',function(){
+         console.log("hit text")
+            cameraEl.setAttribute('user-height',"-17")
+        })
+        
+        var clickEl3 = document.getElementById('soda');
+        // var skyEl = document.getElementById('image-360');
+        
+            clickEl3.addEventListener('click', function () {
+            cameraEl.setAttribute('user-height', "-28")
+            // skyEl.setAttribute('src',"#earth")
+            // clickEl3.setAttribute('visible',"false")
+            });
+            
+      var clickEl4 = document.getElementById('coral')
+        
+      clickEl4.addEventListener('click',function(){
+            cameraEl.setAttribute('user-height',"-35")
+        })
+        
+      var clickEl5 = document.getElementById('trash-can')
+        
+      clickEl5.addEventListener('click',function(){
+            cameraEl.setAttribute('user-height',"-45")
+        })
+        
+      var clickEl6 = document.getElementById('fish')
+        
+      clickEl6.addEventListener('click',function(){
+            cameraEl.setAttribute('user-height',"-50")
+        })
+    </script>
+    
+  
+      
+    </a-scene>
+    
+ 
+  
+    
+  </body>
+</html>
